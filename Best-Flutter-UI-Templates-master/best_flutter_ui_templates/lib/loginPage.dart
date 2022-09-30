@@ -1,179 +1,102 @@
-import 'package:best_flutter_ui_templates/Animation/FadeAnimation.dart';
 import 'package:flutter/material.dart';
+import 'package:best_flutter_ui_templates/main.dart';
 
-void main() => runApp(MaterialApp(
+void login() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
-    ));
+      home: LoginDemo(),
+    );
+  }
+}
 
-class HomePage extends StatelessWidget {
+class LoginDemo extends StatefulWidget {
+  @override
+  _LoginDemoState createState() => _LoginDemoState();
+}
+
+class _LoginDemoState extends State<LoginDemo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.white,
-        body: SingleChildScrollView(
-          child: Container(
-            child: Column(
-              children: <Widget>[
-                Container(
-                  height: 400,
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage('assets/images/background.png'),
-                          fit: BoxFit.fill)),
-                  child: Stack(
-                    children: <Widget>[
-                      Positioned(
-                        left: 30,
-                        width: 80,
-                        height: 200,
-                        child: FadeAnimation(
-                            1,
-                            Container(
-                              decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                      image: AssetImage(
-                                          'assets/images/light-1.png'))),
-                            )),
-                      ),
-                      Positioned(
-                        left: 140,
-                        width: 80,
-                        height: 150,
-                        child: FadeAnimation(
-                            1.3,
-                            Container(
-                              decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                      image: AssetImage(
-                                          'assets/images/light-2.png'))),
-                            )),
-                      ),
-                      Positioned(
-                        right: 40,
-                        top: 40,
-                        width: 80,
-                        height: 150,
-                        child: FadeAnimation(
-                            1.5,
-                            Container(
-                              decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                      image: AssetImage(
-                                          'assets/images/clock.png'))),
-                            )),
-                      ),
-                      Positioned(
-                        child: FadeAnimation(
-                            1.6,
-                            Container(
-                              margin: EdgeInsets.only(top: 50),
-                              child: Center(
-                                child: Text(
-                                  "Login",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 40,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                              ),
-                            )),
-                      )
-                    ],
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.all(30.0),
-                  child: Column(
-                    children: <Widget>[
-                      FadeAnimation(
-                          1.8,
-                          Container(
-                            padding: EdgeInsets.all(5),
-                            decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(10),
-                                boxShadow: [
-                                  BoxShadow(
-                                      color: Color.fromRGBO(143, 148, 251, .2),
-                                      blurRadius: 20.0,
-                                      offset: Offset(0, 10))
-                                ]),
-                            child: Column(
-                              children: <Widget>[
-                                Container(
-                                  padding: EdgeInsets.all(8.0),
-                                  decoration: BoxDecoration(
-                                      border: Border(
-                                          bottom: BorderSide(
-                                              color: Colors.grey[100]))),
-                                  child: TextField(
-                                    decoration: InputDecoration(
-                                        border: InputBorder.none,
-                                        hintText: "Email or Phone number",
-                                        hintStyle:
-                                            TextStyle(color: Colors.grey[400])),
-                                  ),
-                                ),
-                                Container(
-                                  padding: EdgeInsets.all(8.0),
-                                  child: TextField(
-                                    decoration: InputDecoration(
-                                        border: InputBorder.none,
-                                        hintText: "Password",
-                                        hintStyle:
-                                            TextStyle(color: Colors.grey[400])),
-                                  ),
-                                )
-                              ],
-                            ),
-                          )),
-                      SizedBox(
-                        height: 30,
-                      ),
-                      FadeAnimation(
-                          2,
-                          Container(
-                            height: 50,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                gradient: LinearGradient(colors: [
-                                  Color.fromRGBO(143, 148, 251, 1),
-                                  Color.fromRGBO(143, 148, 251, .6),
-                                ])),
-                            child: Center(
-                              child: ElevatedButton(
-                                onPressed: () {
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) => HomePage()));
-                                },
-                                child: Text(
-                                  "sigin",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                              ),
-                            ),
-                          )),
-                      SizedBox(
-                        height: 70,
-                      ),
-                      FadeAnimation(
-                          1.5,
-                          Text(
-                            "Forgot Password?",
-                            style: TextStyle(
-                                color: Color.fromRGBO(143, 148, 251, 1)),
-                          )),
-                    ],
-                  ),
-                )
-              ],
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        title: Text("Login Page"),
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.only(top: 60.0),
+              child: Center(
+                child: Container(
+                    width: 200,
+                    height: 150,
+                    /*decoration: BoxDecoration(
+                        color: Colors.red,
+                        borderRadius: BorderRadius.circular(50.0)),*/
+                    child: Image.asset('asset/images/flutter-logo.png')),
+              ),
             ),
-          ),
-        ));
+            Padding(
+              //padding: const EdgeInsets.only(left:15.0,right: 15.0,top:0,bottom: 0),
+              padding: EdgeInsets.symmetric(horizontal: 15),
+              child: TextField(
+                decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: 'Email',
+                    hintText: 'Enter valid email id as abc@gmail.com'),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(
+                  left: 15.0, right: 15.0, top: 15, bottom: 0),
+              //padding: EdgeInsets.symmetric(horizontal: 15),
+              child: TextField(
+                obscureText: true,
+                decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: 'Password',
+                    hintText: 'Enter secure password'),
+              ),
+            ),
+            TextButton(
+              onPressed: () {
+                //TODO FORGOT PASSWORD SCREEN GOES HERE
+              },
+              child: Text(
+                'Forgot Password',
+                style: TextStyle(color: Colors.blue, fontSize: 15),
+              ),
+            ),
+            Container(
+              height: 50,
+              width: 250,
+              decoration: BoxDecoration(
+                  color: Colors.blue, borderRadius: BorderRadius.circular(20)),
+              child: TextButton(
+                onPressed: () {
+                  Navigator.push(
+                      context, MaterialPageRoute(builder: (_) => main()));
+                },
+                child: Text(
+                  'Login',
+                  style: TextStyle(color: Colors.white, fontSize: 25),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 130,
+            ),
+            Text('New User? Create Account')
+          ],
+        ),
+      ),
+    );
   }
 }
