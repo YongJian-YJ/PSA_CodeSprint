@@ -38,7 +38,6 @@ class _HomePageState extends State<HomePage> {
   nextPage(){
 
   }
-  
   getContext(int index){
     //Get context from backend
     Map map = Map<int, dynamic>();
@@ -70,12 +69,6 @@ class _HomePageState extends State<HomePage> {
           };
   return map[index];
   }
-
-  int _getDataSize(){
-    //talk to backend to get the count of all request
-    return 3;
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -107,7 +100,7 @@ class _HomePageState extends State<HomePage> {
       body: Container(
         color: Colors.grey.shade100,
         child: ListView.builder(
-          itemCount: _getDataSize(),
+          itemCount: 3,
           itemBuilder: (context, index) {
             return Slidable(
             
