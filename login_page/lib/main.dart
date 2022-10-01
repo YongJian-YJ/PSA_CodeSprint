@@ -3,6 +3,7 @@ import 'package:day12_login/listView.dart';
 import 'package:flutter/gestures.dart';
 import 'package:day12_login/Animation/FadeAnimation.dart';
 import 'package:flutter/material.dart';
+import 'package:day12_login/list.dart';
 
 void main() => runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -140,7 +141,7 @@ class LoginPageForCustomer extends StatelessWidget {
                             onTap: () => Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => ViewList())),
+                                    builder: (context) => HomePage())),
                             child: Container(
                               height: 50,
                               width: 300,
