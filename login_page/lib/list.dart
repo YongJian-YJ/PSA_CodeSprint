@@ -1,7 +1,9 @@
+import 'icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'dart:collection';
 import 'dart:convert';
+
 
 void main() => runApp(
   MaterialApp(
@@ -195,6 +197,11 @@ class _HomePageState extends State<HomePage> {
                       SizedBox(height: 5,),
                       Text(jsonEncoder.convert(getContext(index)["items"]), style: TextStyle(color: Colors.grey[500])),
                     ]
+                  ),SizedBox(width: 10),
+                  Container(
+                    width: 60,
+                    height: 60,
+                    child: Icon(MyFlutterApp.ok_circled)
                   )
                 ]
               )
