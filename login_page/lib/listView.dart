@@ -1,3 +1,7 @@
+import 'dart:io';
+
+import 'package:camera/camera.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(new ViewList());
@@ -26,6 +30,14 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  final imagePicker = ImagePicker();
+  File imageFile;
+  void _setImage() async {
+    imageFile = File(await ImagePicker()
+        .getImage(source: ImageSource.gallery)
+        .then((pickedFile) => pickedFile.path));
+  }
+
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -63,6 +75,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ))
         ],
+      ),
+      floatingActionButton: new FloatingActionButton(
+        onPressed: _setImage,
+        tooltip: 'Increment',
+        child: new Icon(Icons.add),
       ),
     );
   }
