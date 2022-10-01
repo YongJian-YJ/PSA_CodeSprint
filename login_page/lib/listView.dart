@@ -6,11 +6,12 @@ class ViewList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      title: 'Display Information',
+      debugShowCheckedModeBanner: false,
+      title: 'Flutter Demo',
       theme: new ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.orange,
       ),
-      home: new MyHomePage(title: 'E-PON Details Page'),
+      home: new MyHomePage(title: 'EPON Details Page'),
     );
   }
 }
@@ -25,34 +26,43 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
         title: new Text(widget.title),
       ),
-      body: new Center(
-        child: new Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            new Text(
-              'You have pushed the button this many times:',
+      body: Column(
+        children: [
+          new Center(
+            child: new Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                new Text(
+                  'Company Name: PSA\nVehicle No: SGX 2345G\nDriveer Name: Jimmy\nDriver PSA Contact No: UIX627G\nDescription:\n     1.  10 Boxes of Water Bottles\n     2.  5 Carton of Milk',
+                  style: TextStyle(height: 2.5, fontSize: 20),
+                ),
+              ],
             ),
-          ],
-        ),
-      ),
-      floatingActionButton: new FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: new Icon(Icons.add),
+          ),
+          Container(height: 130),
+          ElevatedButton(
+              onPressed: () {},
+              child: Container(
+                height: 50,
+                width: 150,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Center(
+                  child: Text(
+                    "Approve",
+                    style: TextStyle(
+                        color: Colors.white, fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ))
+        ],
       ),
     );
   }
