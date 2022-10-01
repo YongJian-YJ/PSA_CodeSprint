@@ -4,27 +4,27 @@ import 'package:flutter/material.dart';
 
 class CustomFormField {
   TextFormField field({
-    required String question,
+    String question,
     //
-    required bool canBeNull,
+    bool canBeNull,
     //
-    required Function onSavedCallback,
+    Function onSavedCallback,
     //
-    required GlobalKey<FormState> formKey,
+    GlobalKey<FormState> formKey,
     //
-    double? fieldTextFontSize,
+    double fieldTextFontSize,
     //
-    String? initialValue,
+    String initialValue,
     //
-    double? verticalTextPadding,
-    double? horizontalTextPadding,
+    double verticalTextPadding,
+    double horizontalTextPadding,
     //
-    Icon? icon,
+    Icon icon,
     //
 
-    double? borderRadius,
+    double borderRadius,
     //
-    TextStyle? labelTextStyle,
+    TextStyle labelTextStyle,
     //
   }) {
     BorderRadius borderRadius_;
@@ -68,13 +68,13 @@ class CustomFormField {
         filled: true,
         fillColor: Colors.grey[200],
       ),
-      validator: (String? value) {
-        if (value!.trim().isEmpty && !canBeNull) {
+      validator: (String value) {
+        if (value.trim().isEmpty && !canBeNull) {
           return 'Required';
         }
         return null;
       },
-      onSaved: (String? val) {
+      onSaved: (String val) {
         formKey.currentState?.validate();
         onSavedCallback(val.toString());
       },
