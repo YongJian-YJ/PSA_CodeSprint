@@ -6,11 +6,11 @@ class ViewList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      title: 'Display Information',
+      title: 'Flutter Demo',
       theme: new ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: new MyHomePage(title: 'E-PON Details Page'),
+      home: new MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
@@ -45,6 +45,10 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             new Text(
               'You have pushed the button this many times:',
+            ),
+            new Text(
+              '$_counter',
+              style: Theme.of(context).textTheme.display1,
             ),
           ],
         ),
