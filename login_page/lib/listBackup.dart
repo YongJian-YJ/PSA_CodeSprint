@@ -1,9 +1,7 @@
-import 'icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'dart:collection';
 import 'dart:convert';
-
 
 void main() => runApp(
   MaterialApp(
@@ -40,7 +38,6 @@ class _HomePageState extends State<HomePage> {
   nextPage(){
 
   }
-  
   getContext(int index){
     //Get context from backend
     Map map = Map<int, dynamic>();
@@ -72,12 +69,6 @@ class _HomePageState extends State<HomePage> {
           };
   return map[index];
   }
-
-  int _getDataSize(){
-    //talk to backend to get the count of all request
-    return 3;
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -109,7 +100,7 @@ class _HomePageState extends State<HomePage> {
       body: Container(
         color: Colors.grey.shade100,
         child: ListView.builder(
-          itemCount: _getDataSize(),
+          itemCount: 3,
           itemBuilder: (context, index) {
             return Slidable(
             
@@ -197,11 +188,6 @@ class _HomePageState extends State<HomePage> {
                       SizedBox(height: 5,),
                       Text(jsonEncoder.convert(getContext(index)["items"]), style: TextStyle(color: Colors.grey[500])),
                     ]
-                  ),SizedBox(width: 10),
-                  Container(
-                    width: 60,
-                    height: 60,
-                    child: Icon(MyFlutterApp.ok_circled)
                   )
                 ]
               )
