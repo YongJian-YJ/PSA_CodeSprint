@@ -181,11 +181,12 @@ class _HomePageState extends State<HomePage> {
 
     return InkWell(
       onTap: () => print("clicked!") , // Handle your callback
-      child: Container(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [Container(
           margin: EdgeInsets.symmetric(horizontal: 20),
           padding: EdgeInsets.only(top: 10, bottom: 10),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Row(
                 children: [
@@ -197,17 +198,18 @@ class _HomePageState extends State<HomePage> {
                       SizedBox(height: 5,),
                       Text(jsonEncoder.convert(getContext(index)["items"]), style: TextStyle(color: Colors.grey[500])),
                     ]
-                  ),SizedBox(width: 10),
-                  Container(
-                    width: 60,
-                    height: 60,
-                    child: Icon(MyFlutterApp.ok_circled)
                   )
                 ]
               )
             ]
           )
-    )
+    ),Container(
+      child: Row(
+        children: [Icon(MyFlutterApp.ok_circled), SizedBox(width: 20)]
+      )
+      ),
+      ]
+      )
   );
   }
 }
