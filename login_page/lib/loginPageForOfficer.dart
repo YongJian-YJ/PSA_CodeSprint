@@ -1,6 +1,7 @@
 import 'package:day12_login/main.dart';
+import 'package:day12_login/signing_officer_list.dart';
 import 'package:flutter/gestures.dart';
-import 'package:day12_login/listView.dart';
+import 'package:day12_login/view_customer_Signing_officer.dart';
 import 'package:day12_login/Animation/FadeAnimation.dart';
 import 'package:flutter/material.dart';
 
@@ -140,7 +141,8 @@ class LoginPageForOfficer extends StatelessWidget {
                             onTap: () => Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => ViewList())),
+                                    builder: (context) =>
+                                        Signing_Officer_list())),
                             child: Container(
                               height: 50,
                               width: 300,

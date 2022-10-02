@@ -1,12 +1,13 @@
 import 'dart:io';
-
+import 'package:day12_login/view_customer_Signing_officer.dart';
 import 'package:camera/camera.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:day12_login/list.dart';
 
-void main() => runApp(new ViewList());
+void main() => runApp(new ViewListForCustomer());
 
-class ViewList extends StatelessWidget {
+class ViewListForCustomer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
@@ -43,6 +44,15 @@ class _MyHomePageState extends State<MyHomePage> {
     return new Scaffold(
       appBar: new AppBar(
         title: new Text(widget.title),
+        leading: InkWell(
+          onTap: () {
+            Navigator.of(context, rootNavigator: true).pop(context);
+          },
+          child: Icon(
+            Icons.arrow_back_ios,
+            color: Colors.black54,
+          ),
+        ),
       ),
       body: Column(
         children: [
@@ -58,28 +68,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ),
           Container(height: 130),
-          ElevatedButton(
-              onPressed: () {},
-              child: Container(
-                height: 50,
-                width: 150,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: Center(
-                  child: Text(
-                    "Approve",
-                    style: TextStyle(
-                        color: Colors.white, fontWeight: FontWeight.bold),
-                  ),
-                ),
-              ))
         ],
-      ),
-      floatingActionButton: new FloatingActionButton(
-        onPressed: _setImage,
-        tooltip: 'Increment',
-        child: new Icon(Icons.add),
       ),
     );
   }

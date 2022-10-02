@@ -1,4 +1,3 @@
-import 'package:day12_login/view_customer.dart';
 import 'package:day12_login/view_customer_Signing_officer.dart';
 
 import 'icons.dart';
@@ -9,17 +8,17 @@ import 'dart:convert';
 
 void main() => runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: Signing_Officer_list(),
     ));
 
-class HomePage extends StatefulWidget {
-  const HomePage({Key key}) : super(key: key);
+class Signing_Officer_list extends StatefulWidget {
+  const Signing_Officer_list({Key key}) : super(key: key);
 
   @override
   _HomePageState createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomePageState extends State<Signing_Officer_list> {
   @override
   void initState() {
     // TODO: implement initState
@@ -97,12 +96,18 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Column(
         children: [
-          Text('All Submitted Requests',
+          Container(
+            height: 20,
+          ),
+          Text('All EPONs For Today',
               style: TextStyle(
                   fontSize: 20,
                   decoration: TextDecoration.underline,
                   fontWeight: FontWeight.bold,
                   color: Colors.grey.shade700)),
+          Container(
+            height: 50,
+          ),
           Container(
             color: Colors.grey.shade100,
             child: ListView.builder(
@@ -185,7 +190,7 @@ class _HomePageState extends State<HomePage> {
             context,
             MaterialPageRoute(
                 builder: (context) =>
-                    ViewListForCustomer())), // Handle your callback
+                    ViewListForCustomerSigningOfficer())), // Handle your callback
         child:
             Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
           Container(
