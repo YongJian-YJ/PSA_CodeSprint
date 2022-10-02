@@ -74,7 +74,7 @@ class LoginPageForCustomer extends StatelessWidget {
                               margin: EdgeInsets.only(top: 50),
                               child: Center(
                                 child: Text(
-                                  "Customer Login",
+                                  "Requestor Login",
                                   style: TextStyle(
                                       color: Colors.white,
                                       fontSize: 30,

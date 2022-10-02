@@ -61,7 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 new Text(
-                  'Company Name: PSA\nVehicle No: SGX 2345G\nDriveer Name: Jimmy\nDriver PSA Contact No: UIX627G\nDescription:\n     1.  10 Boxes of Water Bottles\n     2.  5 Carton of Milk',
+                  'EPON ID: YUI 289E \nCompany Name: PSA\nVehicle No: SGX 2345G\nDriveer Name: Jimmy\nDriver PSA Contact No: UIX627G\nDescription:\n     1.  10 Boxes of Water Bottles\n     2.  5 Carton of Milk',
                   style: TextStyle(height: 2.5, fontSize: 20),
                 ),
               ],
@@ -69,6 +69,11 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           Container(height: 130),
         ],
+      ),
+      floatingActionButton: new FloatingActionButton(
+        onPressed: () {},
+        tooltip: 'Increment',
+        child: new Icon(Icons.ios_share),
       ),
     );
   }

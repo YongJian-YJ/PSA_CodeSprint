@@ -174,11 +174,6 @@ class _HomePageState extends State<Signing_Officer_list> {
           ),
         ],
       ),
-      floatingActionButton: new FloatingActionButton(
-        onPressed: nextPage,
-        tooltip: 'Increment',
-        child: new Icon(Icons.add),
-      ),
     );
   }
 
