@@ -221,9 +221,13 @@ class _HomePageState extends State<HomePage> {
               ])),
           Container(
               child: Row(children: [
-            Icon(MyFlutterApp.ok_circled),
+            Icon(iconlist(index),),
             SizedBox(width: 20)
           ])),
         ]));
+  }
+  IconData iconlist(int index){
+    List <IconData> icon = [MyFlutterApp.ok_circled,Icons.pending,Icons.not_interested];
+    return icon[index];
   }
 }
