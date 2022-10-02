@@ -12,7 +12,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <img src="https://static.wixstatic.com/media/79cb92_5adc66a2020f43a58763f0ad6265353e~mv2.png/v1/fill/w_253,h_59,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/79cb92_5adc66a2020f43a58763f0ad6265353e~mv2.png" alt="Logo" width="300" height="80">
+  <img src="https://static.wixstatic.com/media/79cb92_8b1815b9318447f39fb19870b393b65c~mv2.png/v1/fill/w_835,h_764,al_c,q_90,enc_auto/79cb92_8b1815b9318447f39fb19870b393b65c~mv2.png" alt="Logo" width="600" height="700">
  
 
   <h3 align="center">PSA Hackathon - HWL</h3>
