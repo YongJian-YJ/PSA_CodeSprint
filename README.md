@@ -29,7 +29,7 @@
 ## About The Project
 
 
-This is a project developed to tackle PSA codesprint 2022's problem statement. We utilize flutter to develop a cross-platform software
+This is a project developed to tackle PSA codesprint 2022's problem statement, Digitalization of Pass Out Note (PON). We utilize flutter to develop a cross-platform software
 that can run on IOS, Android, Windows and Web browser. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -38,7 +38,7 @@ that can run on IOS, Android, Windows and Web browser.
 
 ## Built With
 
-This project is built with flutter and dart as flutter is capable of creating cross-platform applications that can suit all userd' needs.
+This project is built with flutter and dart as flutter is capable of creating cross-platform applications that can suit all users' needs.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -57,7 +57,7 @@ This project is built with flutter and dart as flutter is capable of creating cr
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+_For more details, please refer to our [video](https://example.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -66,11 +66,16 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
+The resources that we referred in this project are as follows:
 
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
+* [Flutter Documentation](https://docs.flutter.dev/)
+* [FlutterIcon](https://www.fluttericon.com/)
+* [MFGLabs - Icon Asset](https://github.com/MfgLabs/mfglabs-iconset)
+* [FortAwesome - Icon Asset](https://github.com/FortAwesome/Font-Awesome)
+* [Flutter Form Field](https://github.com/AryanSethi/form-field-package)
+* [Flutter Slidable](https://github.com/letsar/flutter_slidable)
+* [A Tutorial on Flutter Slidable](https://medium.flutterdevs.com/slidable-in-flutter-33193e2f1108)
+
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -108,3 +113,4 @@ Use this space to list resources you find helpful and would like to give credit 
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com 
+[video]: https://youtube.com
