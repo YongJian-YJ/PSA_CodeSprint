@@ -89,7 +89,7 @@ class _MyHomePageState extends State<MyHomePage> {
       floatingActionButton: new FloatingActionButton(
         onPressed: _setImage,
         tooltip: 'Increment',
-        child: new Icon(Icons.add),
+        child: new Icon(Icons.camera_alt),
       ),
     );
   }

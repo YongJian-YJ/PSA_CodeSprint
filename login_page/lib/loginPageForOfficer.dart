@@ -144,7 +144,7 @@ class LoginPageForOfficer extends StatelessWidget {
                         InkWell(
                             onTap: () => {
                                   if (userNameController.text ==
-                                      "Signing_Officer")
+                                      "Signing_Officer" || userNameController.text == "AETOS")
                                     {
                                       Navigator.push(
                                           context,

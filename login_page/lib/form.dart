@@ -164,7 +164,10 @@ class _FormPageState extends State<FormPage> {
                         //debugPrint(_name);
                       },
                       child: const Text("SUBMIT")),
-                )
+                ),FloatingActionButton(
+        onPressed: () {},
+        child: new Icon(Icons.camera_alt),
+      ),
               ],
         ),
       ),
