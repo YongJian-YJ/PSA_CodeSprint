@@ -1,12 +1,12 @@
+import 'package:day12_login/list.dart';
+
 import 'custom_form_field.dart';
 import 'package:flutter/material.dart';
 
-void main() => runApp(
-  MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: FormPage(),
-  )
-);
+void main() => runApp(MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: FormPage(),
+    ));
 
 class FormPage extends StatefulWidget {
   const FormPage({Key key}) : super(key: key);
@@ -26,26 +26,28 @@ class _FormPageState extends State<FormPage> {
     //textFields.add(_buildTextField());
   }
 
-  Row _buildTextField(){
-    return 
-    Row(
+  Row _buildTextField() {
+    return Row(
       children: [
         SizedBox(width: 16),
-        Expanded(child: TextField(decoration: InputDecoration(
-                                        border: InputBorder.none,
-                                        hintText: "Items",
-                                        hintStyle:
-                                            TextStyle(color: Colors.grey[400])))),
-        SizedBox(width: 16),            // Use this to add some space
-        Expanded(child: TextField(decoration: InputDecoration(
-                                        border: InputBorder.none,
-                                        hintText: "Qty",
-                                        hintStyle:
-                                            TextStyle(color: Colors.grey[400])))),
+        Expanded(
+            child: TextField(
+                decoration: InputDecoration(
+                    border: InputBorder.none,
+                    hintText: "Items",
+                    hintStyle: TextStyle(color: Colors.grey[400])))),
+        SizedBox(width: 16), // Use this to add some space
+        Expanded(
+            child: TextField(
+                decoration: InputDecoration(
+                    border: InputBorder.none,
+                    hintText: "Qty",
+                    hintStyle: TextStyle(color: Colors.grey[400])))),
       ],
     );
   }
- @override
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -55,95 +57,115 @@ class _FormPageState extends State<FormPage> {
         key: key,
         child: ListView(
           //mainAxisAlignment: MainAxisAlignment.center,
-          children: [SizedBox(height: 20,),
-            CustomFormField().field(
-              question: "Company Name",
-              canBeNull: false,
-              formKey: key,
-              onSavedCallback: (String val) {
-                _name = val;
-              },
-              horizontalTextPadding: 20,
-              verticalTextPadding: 10,
-              labelTextStyle: const TextStyle(color: Colors.black),
-              icon: const Icon(
-                Icons.email_outlined,
-                color: Colors.grey,
-                size: 25,
-              ),
-              fieldTextFontSize: 15,
-            ),SizedBox(height: 20,),
-            CustomFormField().field(
-              question: "Vehicle No",
-              canBeNull: false,
-              formKey: key,
-              onSavedCallback: (String val) {
-                _name = val;
-              },
-              horizontalTextPadding: 20,
-              verticalTextPadding: 10,
-              labelTextStyle: const TextStyle(color: Colors.black),
-              icon: const Icon(
-                Icons.email_outlined,
-                color: Colors.grey,
-                size: 25,
-              ),
-              fieldTextFontSize: 15,
-            ),SizedBox(height: 20,),
-            CustomFormField().field(
-              question: "Driver name",
-              canBeNull: false,
-              formKey: key,
-              onSavedCallback: (String val) {
-                _name = val;
-              },
-              horizontalTextPadding: 20,
-              verticalTextPadding: 10,
-              labelTextStyle: const TextStyle(color: Colors.black),
-              icon: const Icon(
-                Icons.email_outlined,
-                color: Colors.grey,
-                size: 25,
-              ),
-              fieldTextFontSize: 15,
-            ),SizedBox(height: 20,),
-            CustomFormField().field(
-              question: "Driver's PSA Pass no",
-              canBeNull: false,
-              formKey: key,
-              onSavedCallback: (String val) {
-                _name = val;
-              },
-              horizontalTextPadding: 20,
-              verticalTextPadding: 10,
-              labelTextStyle: const TextStyle(color: Colors.black),
-              icon: const Icon(
-                Icons.email_outlined,
-                color: Colors.grey,
-                size: 25,
-              ),
-              fieldTextFontSize: 15,
-            ),SizedBox(height: 20,),Text("Items"),]+textFields+
-    [Padding(
-              padding: const EdgeInsets.only(top: 50),
-              child: ElevatedButton(
-                  onPressed: () {
-                    setState((){
-                  textFields.add(_buildTextField());
-                });
+          children: [
+                SizedBox(
+                  height: 20,
+                ),
+                CustomFormField().field(
+                  question: "Company Name",
+                  canBeNull: false,
+                  formKey: key,
+                  onSavedCallback: (String val) {
+                    _name = val;
                   },
-                  child: const Text("Add")),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 50),
-              child: ElevatedButton(
-                  onPressed: () {
-                    key.currentState.save();
-                    debugPrint(_name);
+                  horizontalTextPadding: 20,
+                  verticalTextPadding: 10,
+                  labelTextStyle: const TextStyle(color: Colors.black),
+                  icon: const Icon(
+                    Icons.email_outlined,
+                    color: Colors.grey,
+                    size: 25,
+                  ),
+                  fieldTextFontSize: 15,
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                CustomFormField().field(
+                  question: "Vehicle No",
+                  canBeNull: false,
+                  formKey: key,
+                  onSavedCallback: (String val) {
+                    _name = val;
                   },
-                  child: const Text("SUBMIT")),
-            )
-          ],
+                  horizontalTextPadding: 20,
+                  verticalTextPadding: 10,
+                  labelTextStyle: const TextStyle(color: Colors.black),
+                  icon: const Icon(
+                    Icons.email_outlined,
+                    color: Colors.grey,
+                    size: 25,
+                  ),
+                  fieldTextFontSize: 15,
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                CustomFormField().field(
+                  question: "Driver name",
+                  canBeNull: false,
+                  formKey: key,
+                  onSavedCallback: (String val) {
+                    _name = val;
+                  },
+                  horizontalTextPadding: 20,
+                  verticalTextPadding: 10,
+                  labelTextStyle: const TextStyle(color: Colors.black),
+                  icon: const Icon(
+                    Icons.email_outlined,
+                    color: Colors.grey,
+                    size: 25,
+                  ),
+                  fieldTextFontSize: 15,
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                CustomFormField().field(
+                  question: "Driver's PSA Pass no",
+                  canBeNull: false,
+                  formKey: key,
+                  onSavedCallback: (String val) {
+                    _name = val;
+                  },
+                  horizontalTextPadding: 20,
+                  verticalTextPadding: 10,
+                  labelTextStyle: const TextStyle(color: Colors.black),
+                  icon: const Icon(
+                    Icons.email_outlined,
+                    color: Colors.grey,
+                    size: 25,
+                  ),
+                  fieldTextFontSize: 15,
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Text("Items"),
+              ] +
+              textFields +
+              [
+                Padding(
+                  padding: const EdgeInsets.only(top: 50),
+                  child: ElevatedButton(
+                      onPressed: () {
+                        setState(() {
+                          textFields.add(_buildTextField());
+                        });
+                      },
+                      child: const Text("Add")),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 50),
+                  child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.of(context, rootNavigator: true).pop(context);
+                        //key.currentState.save();
+                        //debugPrint(_name);
+                      },
+                      child: const Text("SUBMIT")),
+                )
+              ],
         ),
       ),
     );

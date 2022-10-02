@@ -106,7 +106,7 @@ class _HomePageState extends State<Signing_Officer_list> {
                   fontWeight: FontWeight.bold,
                   color: Colors.grey.shade700)),
           Container(
-            height: 50,
+            height: 20,
           ),
           Container(
             color: Colors.grey.shade100,

@@ -23,7 +23,7 @@ class LoginPageForCustomer extends StatelessWidget {
                   height: 400,
                   decoration: BoxDecoration(
                       image: DecorationImage(
-                          image: AssetImage('assets/images/background.png'),
+                          image: AssetImage('assets/images/background3.png'),
                           fit: BoxFit.fill)),
                   child: Stack(
                     children: <Widget>[
@@ -148,7 +148,7 @@ class LoginPageForCustomer extends StatelessWidget {
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(10),
                                   gradient: LinearGradient(colors: [
-                                    Color.fromARGB(255, 11, 129, 81),
+                                    Color.fromARGB(255, 25, 175, 115),
                                     Color.fromARGB(153, 38, 202, 150),
                                   ])),
                               child: Center(

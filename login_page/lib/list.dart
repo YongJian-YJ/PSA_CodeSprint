@@ -1,3 +1,4 @@
+import 'package:day12_login/form.dart';
 import 'package:day12_login/view_customer.dart';
 import 'package:day12_login/view_customer_Signing_officer.dart';
 
@@ -97,12 +98,18 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Column(
         children: [
+          Container(
+            height: 20,
+          ),
           Text('All Submitted Requests',
               style: TextStyle(
                   fontSize: 20,
                   decoration: TextDecoration.underline,
                   fontWeight: FontWeight.bold,
                   color: Colors.grey.shade700)),
+          Container(
+            height: 20,
+          ),
           Container(
             color: Colors.grey.shade100,
             child: ListView.builder(
@@ -170,7 +177,10 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
       floatingActionButton: new FloatingActionButton(
-        onPressed: nextPage,
+        onPressed: () {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => FormPage()));
+        },
         tooltip: 'Increment',
         child: new Icon(Icons.add),
       ),
