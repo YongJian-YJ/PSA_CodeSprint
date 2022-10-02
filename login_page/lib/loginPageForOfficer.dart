@@ -4,11 +4,14 @@ import 'package:flutter/gestures.dart';
 import 'package:day12_login/view_customer_Signing_officer.dart';
 import 'package:day12_login/Animation/FadeAnimation.dart';
 import 'package:flutter/material.dart';
+import 'designated_officer_list.dart';
 
 void main() => runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
       home: LoginPageForOfficer(),
     ));
+
+TextEditingController userNameController = new TextEditingController();
 
 class LoginPageForOfficer extends StatelessWidget {
   @override
@@ -112,6 +115,7 @@ class LoginPageForOfficer extends StatelessWidget {
                                           bottom: BorderSide(
                                               color: Colors.grey[100]))),
                                   child: TextField(
+                                    controller: userNameController,
                                     decoration: InputDecoration(
                                         border: InputBorder.none,
                                         hintText: "Email or Phone number",
@@ -138,11 +142,26 @@ class LoginPageForOfficer extends StatelessWidget {
                       FadeAnimation(
                         2,
                         InkWell(
-                            onTap: () => Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        Signing_Officer_list())),
+                            onTap: () => {
+                                  if (userNameController.text ==
+                                      "Signing_Officer")
+                                    {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  Signing_Officer_list())),
+                                    }
+                                  else if (userNameController.text ==
+                                      "Designated_Officer")
+                                    {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  Designated_Officer_list())),
+                                    }
+                                },
                             child: Container(
                               height: 50,
                               width: 300,
