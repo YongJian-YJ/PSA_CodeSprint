@@ -176,7 +176,7 @@ class LoginPageForOfficer extends StatelessWidget {
                                           LoginPageForCustomer()));
                             },
                             child: Text(
-                              "Login as Officer",
+                              "Login as Requestor",
                               style: TextStyle(
                                   color: Color.fromARGB(255, 226, 40, 108)),
                             ),
