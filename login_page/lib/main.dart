@@ -1,5 +1,5 @@
 import 'package:day12_login/loginPageForOfficer.dart';
-import 'package:day12_login/listView.dart';
+import 'package:day12_login/view_customer_Signing_officer.dart';
 import 'package:flutter/gestures.dart';
 import 'package:day12_login/Animation/FadeAnimation.dart';
 import 'package:flutter/material.dart';
@@ -148,8 +148,8 @@ class LoginPageForCustomer extends StatelessWidget {
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(10),
                                   gradient: LinearGradient(colors: [
-                                    Color.fromRGBO(143, 148, 251, 1),
-                                    Color.fromRGBO(143, 148, 251, .6),
+                                    Color.fromARGB(255, 11, 129, 81),
+                                    Color.fromARGB(153, 38, 202, 150),
                                   ])),
                               child: Center(
                                 child: Text(
